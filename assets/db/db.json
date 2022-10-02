@@ -135,6 +135,12 @@
       "tipo": "fruta",
       "preco": "19.99",
       "id": 20
+    },
+    {
+      "produto": "a",
+      "preco": "b",
+      "tipo": "c",
+      "id": 21
     }
   ]
 }
