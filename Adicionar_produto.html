@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Carrinho de compras</title>
+		<title>Adicionar produto</title>
 		<link rel="stylesheet" href="./assets/css/site.css" />
 	</head>
 	<body>
@@ -43,10 +43,21 @@
 			</div>
 		</section>
 
-		<section id="cart-details">
-			<h1>Produtos no carrinho</h1>
+		<section id="add-produto">
+			<h1>Adicionar produto a lista principal</h1>
 
-			<div class="cart-details" data-cartDetails></div>
+			<div class="product-add" data-productAdd>
+				<form>
+					<input type="text" placeholder="Nome do Produto" name="produto" />
+					<input type="text" placeholder="Preço do Produto" name="preco" />
+					<input
+						type="text"
+						placeholder="Descricao do Produto"
+						name="descricao"
+					/>
+					<input type="submit" value="Enviar" />
+				</form>
+			</div>
 		</section>
 
 		<section id="contato">
