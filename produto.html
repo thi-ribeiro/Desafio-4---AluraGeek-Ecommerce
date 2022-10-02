@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Descrição do produto</title>
+		<link rel="stylesheet" href="./assets/css/site.css" />
+	</head>
+	<body>
+		<section id="topo">
+			<div class="topo">
+				<div class="logo-search">
+					<div class="logo-img">
+						<a href="./"> <img src="./assets/imgs/Logo.png" alt="logo" /></a>
+					</div>
+					<div class="search-box">
+						<div class="search">
+							<input
+								type="text"
+								placeholder="O que deseja encontrar?"
+								name="search-items"
+							/>
+						</div>
+
+						<div class="search-img">
+							<img src="./assets/imgs/search.svg" alt="searchimg" />
+						</div>
+					</div>
+				</div>
+				<div class="div-carrinho">
+					<div class="carrinho-counter" data-carrinhoCounter>0</div>
+					<img
+						src="./assets/imgs/carrinho.svg"
+						width="100%"
+						height="40px"
+						alt="carrinho"
+					/>
+				</div>
+				<div class="login">
+					<button id="login_btn">LOGIN</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="produto-detalhes">
+			<div class="produto-detalhes" data-produto></div>
+
+			<div class="produtos-similares">
+				<h2>Produtos similares</h2>
+				<div class="produtos-similares-lista" data-similares></div>
+			</div>
+		</section>
+
+		<section id="contato">
+			<div class="contato">
+				<div class="contato-logo-menu">
+					<div class="contato-logo">
+						<img src="./assets/imgs/Logo.png" alt="logo" />
+					</div>
+					<div class="contato-menu">
+						<ul class="ul-contato-menu">
+							<li>Quem somos nós</li>
+							<li>Política de privacidade</li>
+							<li>Programa de fidelidade</li>
+							<li>Nossas lojas</li>
+							<li>Quero ser franqueado</li>
+							<li>Anuncie aqui</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="contato-fale-conosco">
+					<form class="form-fale-conosco">
+						<label for="nome">Nome</label>
+						<input
+							type="text"
+							placeholder="Nome"
+							name="nome"
+							autocomplete="disabled"
+						/>
+						<label for="mensagem">Mensagem</label>
+						<textarea name="mensagem"></textarea>
+						<div><input type="submit" value="Enviar mensagem" /></div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer id="rodape">
+			<div class="rodape">Desenvolvido por Thiago Ribeiro Fantin<br />2022</div>
+		</footer>
+	</body>
+	<script src="./assets/js/site.js"></script>
+	<script
+		type="module"
+		src="./controller/detalheProduto-controller.js"
+	></script>
+</html>

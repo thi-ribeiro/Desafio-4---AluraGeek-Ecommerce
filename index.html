@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>AluraGeek</title>
+		<link rel="stylesheet" href="./assets/css/site.css" />
+	</head>
+	<body>
+		<section id="topo">
+			<div class="topo">
+				<div class="logo-search">
+					<div class="logo-img">
+						<a href="./"><img src="./assets/imgs/Logo.png" alt="logo" /></a>
+					</div>
+					<div class="search-box">
+						<div class="search">
+							<input
+								type="text"
+								placeholder="O que deseja encontrar?"
+								name="search-items"
+							/>
+						</div>
+
+						<div class="search-img">
+							<img src="./assets/imgs/search.svg" alt="searchimg" />
+						</div>
+					</div>
+				</div>
+				<div class="div-carrinho">
+					<div class="carrinho-counter" data-carrinhoCounter>0</div>
+					<a href="./Carrinho.html"
+						><img
+							src="./assets/imgs/carrinho.svg"
+							width="100%"
+							height="40px"
+							alt="carrinho"
+					/></a>
+				</div>
+				<div class="login">
+					<button id="login_btn">LOGIN</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="promo">
+			<div class="img-promo">
+				<div class="desc-promo">
+					<h1>Dezembro promocional</h1>
+					<h2>Produtos selecionados com 33% de desconto</h2>
+					<div class="button-div">
+						<button>Ver consoles</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="linha-produto">
+			<div class="linha-produto" data-linhaprodutos></div>
+		</section>
+
+		<section id="contato">
+			<div class="contato">
+				<div class="contato-logo-menu">
+					<div class="contato-logo">
+						<img src="./assets/imgs/Logo.png" alt="logo" />
+					</div>
+					<div class="contato-menu">
+						<ul class="ul-contato-menu">
+							<li><a href="#">Quem somos nós</a></li>
+							<li><a href="#">Política de privacidade</a></li>
+							<li><a href="#">Programa de fidelidade</a></li>
+							<li><a href="#">Nossas lojas</a></li>
+							<li><a href="#">Quero ser franqueado</a></li>
+							<li><a href="#">Anuncie aqui</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="contato-fale-conosco">
+					<form class="form-fale-conosco">
+						<label for="nome">Nome</label>
+						<input
+							type="text"
+							placeholder="Nome"
+							name="nome"
+							autocomplete="disabled"
+						/>
+						<label for="mensagem">Mensagem</label>
+						<textarea
+							name="mensagem"
+							placeholder="Digite sua mensagem aqui...."
+						></textarea>
+						<div><input type="submit" value="Enviar mensagem" /></div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer id="rodape">
+			<div class="rodape">Desenvolvido por Thiago Ribeiro Fantin<br />2022</div>
+		</footer>
+	</body>
+	<script src="./assets/js/site.js"></script>
+	<script type="module" src="./controller/listaProdutos-controller.js"></script>
+</html>

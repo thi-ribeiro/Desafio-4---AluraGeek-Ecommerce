@@ -1,0 +1,140 @@
+{
+  "profile": [
+    {
+      "nome": "thiagorf",
+      "email": "thiago@a.com",
+      "senha": "12345",
+      "admin": 1,
+      "id": 1
+    },
+    {
+      "nome": "cliente",
+      "email": "cliente@a.com",
+      "senha": "12345",
+      "admin": 0,
+      "id": 1
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Arroz",
+      "tipo": "cereal",
+      "preco": "10.50",
+      "id": 1
+    },
+    {
+      "nome": "Castanha de caju",
+      "tipo": "cereal",
+      "preco": "65.50",
+      "id": 2
+    },
+    {
+      "nome": "Castanha do pará",
+      "tipo": "cereal",
+      "preco": "45.30",
+      "id": 3
+    },
+    {
+      "nome": "Noz",
+      "tipo": "cereal",
+      "preco": "70.99",
+      "id": 4
+    },
+    {
+      "nome": "Fubá",
+      "tipo": "cereal",
+      "preco": "6.50",
+      "id": 5
+    },
+    {
+      "nome": "Feijão",
+      "tipo": "cereal",
+      "preco": "9.50",
+      "id": 6
+    },
+    {
+      "nome": "Linguiça",
+      "tipo": "embutido",
+      "preco": "1.50",
+      "id": 7
+    },
+    {
+      "nome": "Salame Italiano",
+      "tipo": "embutido",
+      "preco": "110.93",
+      "id": 8
+    },
+    {
+      "nome": "Salame Hamburguês",
+      "tipo": "embutido",
+      "preco": "115.92",
+      "id": 9
+    },
+    {
+      "nome": "Presunto Parma",
+      "tipo": "embutido",
+      "preco": "95.93",
+      "id": 10
+    },
+    {
+      "nome": "Ovo codorna",
+      "tipo": "embutido",
+      "preco": "35.90",
+      "id": 11
+    },
+    {
+      "nome": "Socol",
+      "tipo": "embutido",
+      "preco": "146.35",
+      "id": 12
+    },
+    {
+      "nome": "Linguiça Guanabara 400g",
+      "tipo": "embutido",
+      "preco": "19.99",
+      "id": 13
+    },
+    {
+      "nome": "Salamitos",
+      "tipo": "embutido",
+      "preco": "3.50",
+      "id": 14
+    },
+    {
+      "nome": "Laranja Lima",
+      "tipo": "fruta",
+      "preco": "3.50",
+      "id": 15
+    },
+    {
+      "nome": "Limão",
+      "tipo": "fruta",
+      "preco": "1.50",
+      "id": 16
+    },
+    {
+      "nome": "Mexirica Pocã",
+      "tipo": "fruta",
+      "preco": "0.50",
+      "id": 17
+    },
+    {
+      "nome": "Manga",
+      "tipo": "fruta",
+      "preco": "6.50",
+      "id": 18
+    },
+    {
+      "nome": "Banana",
+      "tipo": "fruta",
+      "preco": "5.00",
+      "id": 19
+    },
+    {
+      "nome": "Kiwi",
+      "tipo": "fruta",
+      "preco": "19.99",
+      "id": 20
+    }
+  ]
+}

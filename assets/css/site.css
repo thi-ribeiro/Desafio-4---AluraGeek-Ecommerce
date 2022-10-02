@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&family=Roboto:wght@100&display=swap");
+
+*,
+html {
+    outline-color: transparent;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    color: #2a7ae4;
+    text-decoration: none;
+    transition: color 500ms ease-in-out 0s;
+}
+
+a:hover {
+    color: #5595e9;
+}
+
+button,
+input[type="submit"] {
+    background: #2a7ae4;
+    padding: 16px;
+    color: #fff;
+    border: 1px solid #5595e9;
+}
+
+button:hover,
+input[type="submit"] {
+    background-color: #5595e9;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    padding: 10px 0;
+    margin: 5px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: border 500ms ease-in-out 0s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-bottom: 2px solid #2a7ae4;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+label {
+    font-weight: bold;
+    color: #5595e9;
+}
+
+.topo {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1136px;
+    height: 115px;
+    justify-content: space-between;
+}
+
+.logo-search {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.search {
+    width: 100%;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    min-width: 300px;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.div-carrinho {
+    margin: 0 20px;
+    position: relative;
+}
+
+.carrinho-counter {
+    background-color: rgba(45, 127, 250, 0.9);
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-promo {
+    display: flex;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url(../imgs/banner-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 352px;
+}
+
+.desc-promo {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 1136px;
+}
+
+/* .linha-produto {
+    margin: 10px 0;
+    height: 100vh;
+} */
+
+.linha-produto-titulo {
+    display: flex;
+    margin: 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.linha-produto-titulo .titulo {
+    flex-grow: 1;
+}
+
+.linha-produto-titulo .titulo-todos {
+    display: flex;
+    font-size: smaller;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.linha-produto {
+    max-width: 1136px;
+    margin: 20px auto;
+    height: 100vh;
+}
+
+.linha-produto-cards {
+    display: flex;
+    max-width: 1136px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produto-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: 1px solid #c0d9fa;
+    gap: 5px;
+    width: 176px;
+    padding: 5px;
+
+    transition: border 500ms ease-in-out 0s;
+}
+
+.produto-card:hover {
+    border: 1px solid #2a7ae4;
+}
+
+.produto-card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176px;
+    height: 174px;
+}
+
+.add-cart {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    line-height: 0;
+    display: block;
+    font-weight: bold;
+    font-size: medium;
+    color: #5595e9;
+}
+
+#contato {
+    background-color: #eaf2fd;
+}
+
+.contato {
+    display: flex;
+    height: 368px;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1136px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.form-fale-conosco {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-logo-menu {
+    width: 100%;
+    display: flex;
+}
+
+.contato-fale-conosco {
+    width: 100%;
+}
+
+.ul-contato-menu {
+    list-style: none;
+}
+
+.ul-contato-menu li {
+    margin: 10px 0;
+}
+
+.rodape {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*---------------------- Página detalhes do produto -----------------------------*/
+
+#produto-detalhes {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.produto-detalhes {
+    max-width: 1136px;
+    margin: 0 auto;
+}
+
+.descricao-produto {
+    display: flex;
+    gap: 20px;
+}
+
+.descricao-produto-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.descricao-produto-nome {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.descricao-produto-preco {
+    font-weight: bold;
+}
+
+.descricao-produto-detalhes {
+    text-align: justify;
+}
+
+.produtos-similares {
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.produtos-similares-lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.zoom-in-zoom-out {
+    animation: zoom-in-zoom-out 0.5s ease-in-out;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/*-----------------------------Produto cart ---------------------------*/
+
+.produto-cart-detail {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.controllers-itens-cart {
+    margin: 0 10px;
+}
+
+.produto-cart-detail button {
+    padding: 2px;
+}
+
+/***************************** LOGIN ********************************/
+
+.login_div {
+    width: 50%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.login_form {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 200px;
+    margin: 0 auto; */
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+    border-bottom: 1px solid #5595e9;
+    width: 100%;
+}

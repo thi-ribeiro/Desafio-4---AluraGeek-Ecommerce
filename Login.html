@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="./assets/css/site.css" />
+	</head>
+
+	<body>
+		<section id="topo">
+			<div class="topo">
+				<div class="logo-search">
+					<div class="logo-img">
+						<a href="./"><img src="./assets/imgs/Logo.png" alt="logo" /></a>
+					</div>
+					<div class="search-box">
+						<div class="search">
+							<input
+								type="text"
+								placeholder="O que deseja encontrar?"
+								name="search-items"
+							/>
+						</div>
+
+						<div class="search-img">
+							<img src="./assets/imgs/search.svg" alt="searchimg" />
+						</div>
+					</div>
+				</div>
+				<div class="div-carrinho">
+					<div class="carrinho-counter" data-carrinhoCounter>0</div>
+					<a href="./Carrinho.html"
+						><img
+							src="./assets/imgs/carrinho.svg"
+							width="100%"
+							height="40px"
+							alt="carrinho"
+					/></a>
+				</div>
+				<div class="login">
+					<button id="login_btn">LOGIN</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="login">
+			<div class="login_div">
+				<form class="login_form" id="login_form">
+					<label for="usuario">Usuario</label>
+					<input type="text" name="usuario" />
+					<label for="senha">Password</label>
+					<input type="password" name="senha" />
+					<br />
+					<input type="submit" value="Login" />
+				</form>
+			</div>
+		</section>
+
+		<footer id="rodape">
+			<div class="rodape">Desenvolvido por Thiago Ribeiro Fantin<br />2022</div>
+		</footer>
+	</body>
+	<script src="./assets/js/site.js"></script>
+	<script type="module" src="./controller/listaProdutos-controller.js"></script>
+</html>
