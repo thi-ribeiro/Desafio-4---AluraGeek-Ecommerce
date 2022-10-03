@@ -20,7 +20,7 @@ if (loginForm) {
 
 		console.log(usuario);
 
-		fetch('http://localhost:5000/profile')
+		fetch('http://192.168.18.7:5000/profile')
 			.then((response) => {
 				if (response.status === 200) {
 					return response.json();

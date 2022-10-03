@@ -1,5 +1,5 @@
 const listaProdutos = () => {
-	return fetch(`http://localhost:3000/produtos`).then((res) => {
+	return fetch(`http://192.168.18.7:5000/produtos`).then((res) => {
 		if (res.ok) {
 			return res.json();
 		}
@@ -8,7 +8,7 @@ const listaProdutos = () => {
 };
 
 const detalheProduto = (id) => {
-	return fetch(`http://localhost:3000/produtos/${id}`).then((resposta) => {
+	return fetch(`http://192.168.18.7:5000/produtos/${id}`).then((resposta) => {
 		if (resposta.ok) {
 			return resposta.json();
 		}
