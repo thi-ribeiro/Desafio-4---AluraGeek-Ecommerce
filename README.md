@@ -8,5 +8,7 @@ Sistema e-commerce...
 - Página principal com produtos
 - Detalhes do produto selecionado
 - Produtos similares
+-------------------- 05/10/2022
+- Adaptação do layout "responsivo".
 
 ---json-server --watch db.json --host 192.168.18.7 --port 5000
