@@ -3,7 +3,14 @@ const loginForm = document.getElementById('login_form');
 
 const postProduto = document.getElementById('postProduto');
 
-//console.log(postProduto);
+const BuscaProduto = document.querySelector('[data-search]');
+
+if (BuscaProduto) {
+	BuscaProduto.addEventListener('click', () => {
+		let textoBusca = document.querySelector('[data-search-text]').value;
+		document.location.href = `busca-produtos.html?nome=${textoBusca}`;
+	});
+}
 
 if (botaoLogin) {
 	botaoLogin.addEventListener('click', (e) => {
@@ -51,7 +58,7 @@ if (postProduto) {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ produto: nome, tipo: tipo, preco: preco }),
+			body: JSON.stringify({ nome: nome, tipo: tipo, preco: preco }),
 		})
 			.then((res) => res.json())
 			.then((data) => console.log('a'));

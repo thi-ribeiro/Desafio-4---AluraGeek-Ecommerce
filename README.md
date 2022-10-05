@@ -10,5 +10,6 @@
 - Produtos similares
  ### 05/10/2022
 - Adaptação do layout "responsivo".
+- Busca de produtos funcional.
 
 ---json-server --watch db.json --host 192.168.18.7 --port 5000

@@ -137,13 +137,13 @@
       "id": 20
     },
     {
-      "produto": "a",
+      "nome": "a",
       "preco": "b",
       "tipo": "c",
       "id": 21
     },
     {
-      "produto": "Salsicha",
+      "nome": "Salsicha",
       "tipo": "Embutido",
       "preco": "199",
       "id": 22

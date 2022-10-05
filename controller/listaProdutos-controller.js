@@ -4,6 +4,8 @@ import { CarrinhoDados } from './produtos-cart-controller.js';
 const LinhaProdutos = document.querySelector('[data-linhaprodutos]');
 const CartAddButton = document.querySelector('[data-add]');
 
+let listaProdutos = document.querySelector('[data-lista-produtos-busca]');
+
 const criaNovoCard = (id, nome, preco, tipo) => {
 	const NovoCard = document.createElement('div');
 
@@ -23,7 +25,12 @@ const criaNovoCard = (id, nome, preco, tipo) => {
 	return NovoCard;
 };
 
-const criaCardGroup = async (tipoProduto, descricao, limite = 5) => {
+const criaCardGroup = async (
+	tipoProduto,
+	descricao,
+	divAppend = LinhaProdutos,
+	limite = 5
+) => {
 	let novoDesc = document.createElement('div');
 	let nenhumDado = document.createElement('div');
 
@@ -44,7 +51,7 @@ const criaCardGroup = async (tipoProduto, descricao, limite = 5) => {
 	novoDesc.innerHTML = conteudo;
 	novoDesc.className = 'linha-grupo-produto';
 
-	LinhaProdutos.appendChild(novoDesc);
+	divAppend.appendChild(novoDesc);
 	let Produtos = document.querySelector(`[data-produtos-${tipoProduto}]`);
 	let produtosData = await ProdutosService.listaProdutos();
 	let arrayProdutos = [];
@@ -56,7 +63,7 @@ const criaCardGroup = async (tipoProduto, descricao, limite = 5) => {
 		}
 	});
 
-	if (window.innerWidth <= 768) {
+	if (window.innerWidth <= 768 && limite > 5) {
 		limite = 4;
 	}
 
@@ -67,24 +74,43 @@ const criaCardGroup = async (tipoProduto, descricao, limite = 5) => {
 			Produtos.appendChild(criaNovoCard(id, nome, preco, tipo));
 		}
 	});
+};
 
-	// ProdutosService.listaProdutos().then((data) => {
-	// 	data.forEach((cardData, index) => {
-	// 		let { nome, tipo, preco, id } = cardData;
-	// 		if (index < limite) {
-	// 			if (tipo === tipoProduto) {
-	// 				Produtos.appendChild(criaNovoCard(id, nome, preco, tipo));
-	// 			}
-	// 		}
-	// 	});
-	// });
+const criaCardGroupBusca = async (qrBusca) => {
+	let novoDesc = document.createElement('div');
+	let nenhumDado = document.createElement('div');
 
-	//if (CartAddButton) {
+	let conteudoNone = `<div>Nenhum produto encontrado!</div>`;
+	nenhumDado.innerHTML = conteudoNone;
 
-	//}
+	let conteudo = `<div class="linha-produto-titulo">
+					<div class="titulo">Resultado da busca " ${qrBusca} ".</div>
+					</div>
+					<div class="linha-produto-cards" data-produtos-busca>
+					</div>`;
+	novoDesc.innerHTML = conteudo;
+	novoDesc.className = 'linha-grupo-produto';
+
+	listaProdutos.appendChild(novoDesc);
+	let Produtos = document.querySelector(`[data-produtos-busca]`);
+	let produtosData = await ProdutosService.buscarProduto(qrBusca);
+
+	produtosData.forEach((cardData, index) => {
+		let { nome, tipo, preco, id } = cardData;
+
+		Produtos.appendChild(criaNovoCard(id, nome, preco, tipo));
+	});
 };
 
 CarrinhoDados.getValuesOfCart();
+
+if (listaProdutos) {
+	const urlSearchParams = new URLSearchParams(window.location.search);
+	const params = Object.fromEntries(urlSearchParams.entries());
+
+	//console.log(params);
+	criaCardGroupBusca(params.nome);
+}
 
 if (LinhaProdutos) {
 	criaCardGroup('fruta', 'Frutas');

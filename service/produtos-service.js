@@ -18,7 +18,7 @@ const detalheProduto = (id) => {
 };
 
 const buscarProduto = (nome) => {
-	return fetch(`http://192.168.18.7:5000/produtos?produto=${nome}`).then(
+	return fetch(`http://192.168.18.7:5000/produtos?nome_like=${nome}`).then(
 		(resposta) => {
 			if (resposta.ok) {
 				return resposta.json();
