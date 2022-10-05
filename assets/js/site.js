@@ -3,7 +3,7 @@ const loginForm = document.getElementById('login_form');
 
 const postProduto = document.getElementById('postProduto');
 
-console.log(postProduto);
+//console.log(postProduto);
 
 if (botaoLogin) {
 	botaoLogin.addEventListener('click', (e) => {

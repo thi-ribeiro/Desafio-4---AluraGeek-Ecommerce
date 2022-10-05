@@ -17,7 +17,20 @@ const detalheProduto = (id) => {
 	});
 };
 
+const buscarProduto = (nome) => {
+	return fetch(`http://192.168.18.7:5000/produtos?produto=${nome}`).then(
+		(resposta) => {
+			if (resposta.ok) {
+				return resposta.json();
+			}
+
+			throw new Error('Não foi possível detalhar o produto!');
+		}
+	);
+};
+
 export const ProdutosService = {
 	listaProdutos,
 	detalheProduto,
+	buscarProduto,
 };
