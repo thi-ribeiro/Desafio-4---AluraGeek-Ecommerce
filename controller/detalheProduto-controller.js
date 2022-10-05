@@ -39,6 +39,10 @@ const criaGrupoSimilares = async (tipoProduto, limite = 5) => {
 		}
 	});
 
+	if (window.innerWidth <= 768) {
+		limite = 4;
+	}
+
 	arrayProdutos.forEach((cardData, index) => {
 		let { nome, tipo, preco, id } = cardData;
 

@@ -56,6 +56,21 @@ const criaCardGroup = async (tipoProduto, descricao, limite = 5) => {
 		}
 	});
 
+	if (window.innerWidth <= 768) {
+		limite = 4;
+	}
+
+	// window.addEventListener('resize', (e) => {
+	// 	console.log(window.innerWidth);
+	// 	if (window.innerWidth <= 1024) {
+	// 		limite = 4;
+	// 	} else if (window.innerWidth >= 768 || window.innerWidth < 700) {
+	// 		limite = 3;
+	// 	} else if (window.innerWidth >= 700) {
+	// 		limite = 2;
+	// 	}
+	// });
+
 	arrayProdutos.forEach((cardData, index) => {
 		let { nome, tipo, preco, id } = cardData;
 

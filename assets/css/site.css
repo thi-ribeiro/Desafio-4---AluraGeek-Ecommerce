@@ -8,6 +8,8 @@ html {
 
 body {
     box-sizing: border-box;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 a {
@@ -57,6 +59,18 @@ textarea {
 label {
     font-weight: bold;
     color: #5595e9;
+}
+
+#login_btn {
+    background-color: #fff;
+    border: 1px solid #5595e9;
+    color: #5595e9;
+    font-weight: bold;
+}
+
+#login_btn:hover {
+    background-color: #5595e9;
+    color: #fff;
 }
 
 .topo {
@@ -156,7 +170,7 @@ label {
 .linha-produto {
     max-width: 1136px;
     margin: 20px auto;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .linha-produto-cards {
@@ -165,6 +179,11 @@ label {
     margin: 0 auto;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produtos-similares-lista {
+    flex-wrap: wrap;
 }
 
 .produto-card {
@@ -172,10 +191,9 @@ label {
     position: relative;
     flex-direction: column;
     border: 1px solid #c0d9fa;
-    gap: 5px;
-    width: 176px;
+    /* gap: 5px; */
+    width: 150px;
     padding: 5px;
-
     transition: border 500ms ease-in-out 0s;
 }
 
@@ -187,7 +205,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 176px;
+    width: auto;
     height: 174px;
 }
 
@@ -247,7 +265,7 @@ label {
 /*---------------------- Página detalhes do produto -----------------------------*/
 
 #produto-detalhes {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,6 +299,10 @@ label {
 
 .descricao-produto-detalhes {
     text-align: justify;
+}
+
+.descricao-produto-imagem img {
+    /* width: 100%; */
 }
 
 .produtos-similares {
@@ -350,4 +372,44 @@ label {
 .login_form input[type="password"] {
     border-bottom: 1px solid #5595e9;
     width: 100%;
+}
+
+.product-add {
+    width: 100%;
+    display: flex;
+}
+
+.product-add input {
+    width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+    .descricao-produto {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .search-box {
+        width: auto;
+        min-width: auto;
+    }
+    .search-box .search {
+        display: none;
+    }
+
+    .contato {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contato-logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descricao-produto-imagem img {
+        width: 100%;
+    }
 }

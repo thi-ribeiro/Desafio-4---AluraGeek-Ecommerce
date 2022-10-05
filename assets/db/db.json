@@ -141,6 +141,12 @@
       "preco": "b",
       "tipo": "c",
       "id": 21
+    },
+    {
+      "produto": "Salsicha",
+      "tipo": "Embutido",
+      "preco": "199",
+      "id": 22
     }
   ]
 }
