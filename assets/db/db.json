@@ -1,18 +1,18 @@
 {
   "profile": [
     {
-      "nome": "thiagorf",
+      "usuario": "thiagorf",
       "email": "thiago@a.com",
       "senha": "12345",
-      "admin": 1,
+      "admin": true,
       "id": 1
     },
     {
-      "nome": "cliente",
+      "usuario": "cliente",
       "email": "cliente@a.com",
       "senha": "12345",
-      "admin": 0,
-      "id": 1
+      "admin": false,
+      "id": 2
     }
   ],
   "produtos": [

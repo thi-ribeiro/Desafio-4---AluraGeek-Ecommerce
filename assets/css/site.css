@@ -61,6 +61,10 @@ label {
     color: #5595e9;
 }
 
+.login {
+    display: flex;
+}
+
 #login_btn {
     background-color: #fff;
     border: 1px solid #5595e9;
@@ -397,6 +401,11 @@ label {
     /* justify-items: center; */
     /* align-content: center; */
     margin: 0 auto;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
 }
 
 @media only screen and (max-width: 768px) {

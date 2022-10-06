@@ -95,6 +95,10 @@ const criaCardGroupBusca = async (qrBusca) => {
 	let Produtos = document.querySelector(`[data-produtos-busca]`);
 	let produtosData = await ProdutosService.buscarProduto(qrBusca);
 
+	if (!produtosData.length) {
+		return listaProdutos.appendChild(nenhumDado);
+	}
+
 	produtosData.forEach((cardData, index) => {
 		let { nome, tipo, preco, id } = cardData;
 

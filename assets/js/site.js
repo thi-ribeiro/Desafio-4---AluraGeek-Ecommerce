@@ -2,8 +2,38 @@ const botaoLogin = document.getElementById('login_btn');
 const loginForm = document.getElementById('login_form');
 
 const postProduto = document.getElementById('postProduto');
-
 const BuscaProduto = document.querySelector('[data-search]');
+const usuarioLogado = sessionStorage.getItem('usuario');
+
+const urlatual = window.location.pathname;
+let parsedUser = JSON.parse(usuarioLogado);
+
+//console.log(urlatual === '/adicionar.html');
+//console.log(parsedUser.admin);
+
+if (urlatual === '/adicionar.html') {
+	//console.log('SIM!');
+	if (!parsedUser.admin) {
+		document.location.href = './';
+	}
+}
+
+if (usuarioLogado) {
+	if (parsedUser.admin) {
+		let logindiv = document.getElementsByClassName('login')[0];
+		let criarElemento = document.createElement('button');
+
+		criarElemento.innerHTML = 'ADICIONAR';
+		criarElemento.classList = 'addProduto';
+		criarElemento.onclick = () => {
+			document.location.href = 'adicionar.html';
+		};
+
+		logindiv.appendChild(criarElemento);
+	}
+
+	botaoLogin.innerHTML = parsedUser.user;
+}
 
 if (BuscaProduto) {
 	BuscaProduto.addEventListener('click', () => {
@@ -23,23 +53,34 @@ if (loginForm) {
 	loginForm.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		let usuario = e.target;
+		let error = document.getElementById('error');
+		let usuario = e.currentTarget.elements.usuario.value;
+		let senha = e.currentTarget.elements.senha.value;
 
-		console.log(usuario);
+		sessionStorage.removeItem('usuario');
+		error.innerHTML = '';
 
-		fetch('http://192.168.18.7:5000/profile')
-			.then((response) => {
-				if (response.status === 200) {
-					return response.json();
-				} else {
-					throw new Error('Something went wrong on api server!');
+		fetch(`http://192.168.18.7:5000/profile?usuario=${usuario}&senha=${senha}`)
+			.then((resposta) => {
+				if (resposta.ok) {
+					return resposta.json();
 				}
+
+				throw new Error('Não foi possível encontrar o usuário!');
 			})
 			.then((data) => {
-				console.log(data);
-			})
-			.catch((error) => {
-				console.error(error);
+				if (data[0] !== undefined) {
+					sessionStorage.setItem(
+						'usuario',
+						JSON.stringify({
+							user: data[0].usuario,
+							admin: data[0].admin,
+						})
+					);
+					window.location.href = './';
+				} else {
+					error.innerHTML = 'Verifique o login!';
+				}
 			});
 	});
 }
