@@ -265,7 +265,7 @@ label {
 .contato {
     display: flex;
     height: 368px;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-around;
     max-width: 1136px;
     margin: 0 auto;
