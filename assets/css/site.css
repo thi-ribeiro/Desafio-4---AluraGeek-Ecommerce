@@ -233,6 +233,31 @@ label {
     color: #5595e9;
 }
 
+.admin-cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    font-weight: bold;
+    font-size: medium;
+    color: #5595e9;
+    margin: 0 5px;
+    gap: 5px;
+}
+
+.admin-cart div {
+    border: 1px solid #c0d9fa;
+    margin: 5px 0;
+    padding: 2px;
+}
+
+.admin-cart div:nth-child(1) {
+    background-color: rgba(0, 255, 34, 0.178);
+}
+.admin-cart div:nth-child(2) {
+    background-color: rgba(255, 0, 0, 0.178);
+}
+
 #contato {
     background-color: #eaf2fd;
 }

@@ -6,7 +6,7 @@ const BuscaProduto = document.querySelector('[data-search]');
 const usuarioLogado = sessionStorage.getItem('usuario');
 
 const urlatual = window.location.pathname;
-let parsedUser = JSON.parse(usuarioLogado);
+const parsedUser = JSON.parse(usuarioLogado);
 
 //console.log(urlatual === '/adicionar.html');
 //console.log(parsedUser.admin);
