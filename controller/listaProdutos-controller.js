@@ -11,31 +11,12 @@ const criaNovoCard = (id, nome, preco, tipo) => {
 	/////////////////////////////////////////
 	const usuarioLogado = sessionStorage.getItem('usuario');
 	const parsedUser = JSON.parse(usuarioLogado);
-
-	if (parsedUser) {
-		const cartModifier = document.getElementsByClassName('produto-card')[0];
-		let criarElementoPlus = document.createElement('button');
-		let criarElementoMinus = document.createElement('button');
-
-		criarElementoPlus.innerHTML = '+';
-		criarElementoPlus.classList = 'addProduto';
-		criarElementoPlus.onclick = () => {
-			document.location.href = 'adicionar.html';
-		};
-		criarElementoMinus.innerHTML = '-';
-		criarElementoMinus.classList = 'removeProduto';
-		criarElementoMinus.onclick = () => {
-			document.location.href = 'adicionar.html';
-		};
-
-		//cartModifier.appendChild(criarElementoPlus);
-	}
 	/////////////////////////////////////////
 	const conteudo = `<div class="produto-card-img">
 	                    <img src="./assets/imgs/Vector.png" alt="produto" />
 	        </div>
 			${
-				parsedUser
+				parsedUser && parsedUser.admin
 					? `<div class="admin-cart"><div>ADD +</div> <div>REMOVE -</div></div>`
 					: `<div class="add-cart" data-addid='${id}' data-addproduto='${nome}'>ADD TO CART +</div>`
 			}			
